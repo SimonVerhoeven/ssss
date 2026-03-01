@@ -32,7 +32,6 @@ import java.net.http.HttpResponse;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.time.Duration;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
@@ -133,31 +132,10 @@ public class SimonCommand extends AbstractShellComponent {
         return "Simon says: goodbye";
     }
 
-    record Guarantee(String type)
-
     @ShellMethod(value = "Exchange the secret keyphrase with Simon and ask him to remember it", group = "Configuration")
     public String pinkyswear(
             @ShellOption(help = "your openapi key") String keyphrase
     ) throws IOException {
-        float price = 0.00f;
-
-        var productGuarantees = new ArrayList<Guarantee>();
-        productGuarantees.stream()
-                .filter((Guarantee guarantee) -> guarantee.type() == "A")
-                .forEach((Guarantee guarantee) -> {
-                    repayment.stream()
-                            .flatMap((GuaranteeLevel guaranteeLevel) -> guaranteeLevel.levels().stream())
-
-                            .filter(some conditions)
-
-                            .forEach((level) -> {
-                                int levelValue = level.levelGuarantee();
-                                guaranteeList.add(guarantee.getCommercialLabel());
-
-                                price += calculateWithSomeArgs(data, levelValue, guarantee, ..);
-                            });
-                });
-
         this.keyphrase = Optional.of(keyphrase);
 
         try (FileWriter fileWriter = new FileWriter(Path.of("demo.txt").toFile())) {

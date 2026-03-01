@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.2.5</version>
+		<version>4.0.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>dev.simonverhoeven</groupId>
@@ -14,9 +14,9 @@
 	<name>ssss</name>
 	<description>Simon Says</description>
 	<properties>
-		<java.version>22</java.version>
-		<maven.compiler.release>22</maven.compiler.release>
-		<spring-shell.version>3.2.4</spring-shell.version>
+		<java.version>25</java.version>
+		<maven.compiler.release>25</maven.compiler.release>
+		<spring-shell.version>3.4.1</spring-shell.version>
 		<jackson.version>2.17.0</jackson.version>
 	</properties>
 	<dependencies>
